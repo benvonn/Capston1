@@ -1,0 +1,33 @@
+###
+
+POST http://localhost:8081/userdb
+content-type: application/json
+
+{
+    "username":"eugene",
+    "ppr": 1.2,
+    "dpr": 2.2
+}
+
+
+
+#########
+
+PUT http://localhost:8081/userdb
+content-type: application/json
+
+{"username":"eugene","ppr":4.0,"dpr":8.0}
+###
+
+GET http://localhost:8081/userdb
+
+
+###
+
+GET http://localhost:8081/StatsBoard/users/http://localhost:8081/StatsBoard/users/[object%20HTMLInputElement]
+Accept: text/html
+
+###
+
+GET http://localhost:8081/StatsBoard/users
+Accept: text/html

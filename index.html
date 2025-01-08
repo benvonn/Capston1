@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Backyard Tally</title>
+    </head>
+    <body>
+        <div id="headBoard">
+            <h1 id="roundNum">Round:</h1>
+            <h1 id="roundNum">1</h2>
+            <h2 id="playerOne-roundScore">Player One:</h2>
+            <h2 id="playerOne-roundScore">0</h2>
+            <h2 id="playerTwo-Name">Player Two:</h2>
+            <h2 id="playerTwo-roundScore">0</h2>
+            <button id="gameEND" onclick="endGAME()">Game End</button>
+        </div>
+        <select id="user-select" onclick="fetchScoreBoard(); fetchUserDetail()">
+            <option id="0">Select a user</option>
+        </select>
+    <h3>Stats</h3>
+
+    </select>
+    <div id="stats"></div>
+        <hr>
+        <div class="TeamOne">
+            <h3></h3>
+            <p class="points" id="playerOnePts">0</p>
+            <section class="InpointScoring">
+                <h4>Bag In</h4>
+                <button id="inPoint-Plus1" onclick="inPointPlusPlayer1()">+</button>
+                <button id="inPoint-Minus1" onclick="inPointMinusPlayer1()" disabled>-</button>    
+            </section>
+            <section class="OnPointScoring">
+                <h4>Bag On</h4>
+                <button id="OnPoint-Plus1" onclick="onPointPlusPlayer1()">+</button>
+                <button id="OnPoint-Minus1" onclick="onPointMinusPlayer1()" disabled>-</button>
+            </section>
+        </div>
+        <hr>
+        <div class="TeamTwo">
+            <p class="points" id="playerTwoPts">0</p>
+            <section class="InpointScoring">
+                <h4>Bag In</h4>
+                <button id="inPoint-Plus2" onclick="inPointPlusPlayer2()">+</button>
+                <button id="inPoint-Minus2" onclick="inPointMinusPlayer2()" disabled>-</button>    
+            </section>
+            <section class="OnPointScoring">
+                <h4>Bag On</h4>
+                <button id="OnPoint-Plus2" onclick="onPointPlusPlayer2()" >+</button>
+                <button id="OnPoint-Minus2" onclick="onPointMinusPlayer2()" disabled>-</button>
+            </section>
+
+        </div>
+        <div class="roundTimer">
+            <h3 id="gameTime">
+                00:00:00:00
+            </h3>
+            <button id="gameStart" onclick="start()">Start Round</button>
+            <button id="gamePause" onclick="gamePause()">Pause</button>
+            <button id="endRound" onclick="resetClock()">End Round</button>
+        </div>
+
+        <button id="dropDown-Button" onclick="openMenu()">☰</button>
+
+        <div class="hidden" id="dropDown-Menu">
+            <button id="UserMenu" onclick="userProfiles()">User Profiles</button>
+            <form class="hidden" id="userProfile-Menu">
+                <label type="text" for="username">Username</label>
+                <input id="username" type="text" >
+                
+                <button id="submitBttn" type="submit">Submit</button>
+            </form>
+        </div>
+
+
+    
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="Points.js"></script>
+    <script src="Navigation.js"></script>
+    <script src="Timer.js"></script>
+
+    </body>
+    <footer>
+
+    </footer>
+</html>
