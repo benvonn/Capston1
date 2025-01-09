@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, request, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
+import os
 
+port = os.environ.get('PORT', 8081)
 app = Flask(__name__)
 CORS(app)
 
@@ -101,5 +103,5 @@ def list_users():
 
 
 if __name__ == '__main__':
-    app.run(port=8081)
+    app.run(debug=True,port=port)
 
