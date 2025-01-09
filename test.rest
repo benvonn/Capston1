@@ -24,7 +24,7 @@ GET http://localhost:8081/userdb
 
 ###
 
-GET http://localhost:8081/StatsBoard/users/http://localhost:8081/StatsBoard/users/[object%20HTMLInputElement]
+GET http://localhost:8081/StatsBoard/users/eugene
 Accept: text/html
 
 ###
