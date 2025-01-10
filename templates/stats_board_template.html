@@ -1,0 +1,20 @@
+<table id="stats">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Player</th>
+            <th>PPR</th>
+            <th>DPR</th>
+        </tr>
+    </thead>
+    <tbody id="table-Body">
+        {% for row in data %}
+        <tr>
+            <td id="stat-id">{{ row.id }}</td>
+            <td id="stat-username">{{ row.username }}</td>
+            <td id="stat-ppr">{{ row.ppr }}</td>
+            <td id="stat-dpr">{{ row.dpr }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
