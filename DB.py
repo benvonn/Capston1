@@ -7,7 +7,8 @@ port = os.environ.get('PORT', 8081)
 app = Flask(__name__)
 CORS(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://benjman:0624@localhost:5432/backyardtally_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://root:6nq0aRXfYmVJ5kpNNmINf4UtvsQGb1wl@dpg-cu06925ds78s73d91ac0-a.oregon-postgres.render.com/backyardtally_db'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://benjman:0624@localhost:5432/backyardtally_db'
 
 db = SQLAlchemy(app)
 
