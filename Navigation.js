@@ -56,7 +56,7 @@ form.addEventListener('submit', function (evt) {
     body: JSON.stringify({ username: `${usernameInput.value}`, ppr: `${Player1_PPR}`, dpr: `${Player1_DPR}` })
   };
   console.log(JSON.stringify(req));
-  fetch('http://localhost:8081/userdb', req)
+  fetch('https://capston1-fqm6.onrender.com/userdb', req)
     .then(res => res.json())
     .then(data => {
       console.log('Success:', data);
@@ -77,7 +77,7 @@ async function fetchScoreBoard() {
   
   console.log($userSelect[0].value)
   if ($userSelect[0].value === "Select a user") {
-    fetch('http://localhost:8081/StatsBoard/users', {
+    fetch('https://capston1-fqm6.onrender.com/StatsBoard/users', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/html',
@@ -108,7 +108,7 @@ async function fetchUserDetail() {
   try {
     
   const $statsDiv = $('#stats');
-  const res = await fetch(`http://localhost:8081/StatsBoard/users/${userId}`, {
+  const res = await fetch(`https://capston1-fqm6.onrender.com/StatsBoard/users/${userId}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'text/html',
