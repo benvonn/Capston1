@@ -65,13 +65,27 @@
         <button id="dropDown-Button" onclick="openMenu()">☰</button>
 
         <div class="hidden" id="dropDown-Menu">
-            <button id="UserMenu" onclick="userProfiles()">User Profiles</button>
-            <form class="hidden" id="userProfile-Menu">
-                <label type="text" for="username">Username</label>
-                <input id="username" type="text" >
+            <button id="UserMenu-signup" onclick="signUpMenu()">Signup</button>
+            <form class="hidden" id="signup-form">
+                <label type="text" for="username-">Username</label>
+                <input id="username-signup" type="text" >
+                <br>
+                <label for="password" type="text">Password</label>
+                <input id="password-signup" type="password">
                 
-                <button id="submitBttn" type="submit">Submit</button>
+                <button class="submitBttn" id="signup-submit" type="submit" onclick="checkInput(event)">submit</button>
             </form>
+            <button id="UserMenu-login" onclick="loginMenu()">Login</button>
+            <form class="hidden" id="login-form">
+                <label id="username-label">Username</label>
+                <input id="username" type="username">
+                <br>
+                <label id="password-label">Password</label>
+                <input id="password" type="password">
+
+                <button class="submitBttn" id='login-submit'type="submit" onclick="loginCheck(event)">submit</button>
+            </form>
+            <button id="logout" onclick="logout()">Logout</button>
         </div>
         <footer>
             COPYRIGHT 2025 PROPERTY OF THE VILLAGE OF IDIOTS
@@ -80,6 +94,7 @@
     
     <script src="https://unpkg.com/jquery"></script>
     <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="game_logic.js"></script>
     <script src="Points.js"></script>
     <script src="Navigation.js"></script>
     <script src="Timer.js"></script>

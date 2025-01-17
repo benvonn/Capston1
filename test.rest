@@ -1,12 +1,12 @@
 ###
 
-POST http://localhost:8081/userdb
+POST https://capston1-fqm6.onrender.com/userdb
 content-type: application/json
 
 {
-    "username":"eugene",
-    "ppr": 1.2,
-    "dpr": 2.2
+    "username":"Henry",
+    "ppr": 0,
+    "dpr": 0
 }
 
 
@@ -29,5 +29,32 @@ Accept: text/html
 
 ###
 
+GET https://capston1-fqm6.onrender.com/StatsBoard/users
+Accept: text/html
+ 
+###
+
+GET https://capston1-fqm6.onrender.com/StatsBoard/users/Henry
+Accept: text/html
+
+###
+
 GET http://localhost:8081/StatsBoard/users
 Accept: text/html
+
+
+
+###
+
+GET http://localhost:8081/
+Accept: text/html
+
+###
+
+POST http://localhost:8081/login
+content-type: application/json
+
+{
+    "username":"tret",
+    "password": "1234"
+}

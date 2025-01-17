@@ -1,272 +1,222 @@
+/* General Styling (unchanged) */
 .hidden {
     display: none;
 }
-
-/* Basic Reset */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-
-/* Body Styling */
+  
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-/* Header */
-#headBoard {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#headBoard h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-#scoreboard h2 {
-    font-size: 1.5em;
-    margin: 5px;
-}
-
-/* Flexbox container for Team One and Team Two */
-.teams-container {
-    display: flex; /* Flexbox layout */
-    justify-content: space-between; /* Ensure space between the two sections */
-    gap: 20px; /* Add space between the two team sections */
-    padding: 20px;
-}
-
-/* Team Section Styling */
-.teamSection {
-    flex: 1; /* Each team section takes equal width */
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.teamSection h3 {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 1.5em;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f4f4f9;
     color: #333;
 }
-
-.teamSection p.points {
-    font-size: 2em;
-    font-weight: bold;
+  
+h1, h2, h3 {
+    margin: 0.25rem 0;
     text-align: center;
-    margin-bottom: 20px;
-    color: #4CAF50;
 }
-
-.teamSection section {
-    margin-bottom: 20px;
+  
+p {
+    margin: 0.25rem 0;
 }
-
-.teamSection button {
-    padding: 10px;
-    font-size: 1.2em;
-    margin: 5px;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+  
+hr {
+    border: 1px solid #ccc;
+    width: 90%;
+    margin: 0.5rem 0;
 }
-
-.teamSection button:disabled {
-    background-color: #ccc;
-}
-
-/* Round Timer Section */
-.roundTimer {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
-.roundTimer h3 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.roundTimer button {
-    padding: 15px 30px;
-    font-size: 1.2em;
-    margin: 10px;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.roundTimer button:disabled {
-    background-color: #ccc;
-}
-
-/* Dropdown Menu */
-
-/* Button Styles */
-button {
-    padding: 12px 25px; /* Larger padding for a more spacious look */
-    font-size: 1.1em; /* Slightly larger font for readability */
-    margin: 8px;
-    border-radius: 8px; /* Rounded corners */
-    border: none;
-    cursor: pointer;
-    outline: none;
-    background-color: #4CAF50; /* Green background */
-    color: white;
-    font-weight: bold;
-    transition: all 0.3s ease; /* Smooth transition on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-#buttonContainer {
+  
+/* Main Layout */
+#headBoard {
     display: flex;
-    justify-content: center; /* Centers the button horizontally */
-    align-items: center;     /* Centers the button vertically */
-    flex-direction: column;  /* Stack buttons vertically */
-    padding: 20px;   
-}  
-
-/* Hover Effect */
-button:hover {
-    background-color: #45a049; /* Slightly darker green when hovering */
-    transform: scale(1.05); /* Slight scale up effect */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+    justify-content: space-around;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 5px;
 }
-
-/* Active Effect (When button is clicked) */
-button:active {
-    background-color: #3e8e41; /* Darker green when clicked */
-    transform: scale(1); /* Remove scaling on click */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+  
+#headBoard h1, #headBoard h2 {
+    margin: 0.5rem;
+    font-size: 1rem;
 }
-
-/* Disabled State */
-button:disabled {
-    background-color: #ccc; /* Gray background when disabled */
-    cursor: not-allowed; /* Change cursor to show it's disabled */
-    box-shadow: none; /* Remove shadow when disabled */
-}
-
-/* Button for Game End (Red) */
+  
 #gameEND {
-    background-color: #f44336; /* Red color for the 'Game End' button */
-}
-
-#gameEND:hover {
-    background-color: #e53935; /* Darker red on hover */
-}
-
-/* Timer Buttons */
-.roundTimer button {
-    background-color: #008CBA; /* Blue color for round timer buttons */
-    font-size: 1.3em; /* Larger font for timer buttons */
-    padding: 15px 30px; /* Larger padding for better size */
-}
-
-.roundTimer button:hover {
-    background-color: #007bb5; /* Darker blue on hover */
-    transform: scale(1.05); /* Slightly scale up on hover */
-}
-
-/* Dropdown Menu Button */
-/* Dropdown Menu Button */
-#dropDown-Button {
-    font-size: 2.5em; /* Larger font for dropdown button */
-    padding: 10px;
-    background-color: transparent;
-    color: #4CAF50;
-    cursor: pointer;
+    background-color: #ff4d4d;
+    color: white;
     border: none;
-    transition: transform 0.2s ease;
+    padding: 0.5rem 1rem; /* Increased size */
+    font-size: 1.2rem; /* Bigger text */
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold; /* Added bold for clarity */
+}
+  
+#gameEND:hover {
+    background-color: #cc0000;
+}
+  
+#dropDown-Button {
+    position: fixed; /* Keep it fixed so it's always visible */
+    top: 5avipx; /* Slightly below the top of the screen */
+    right: 20px; /* Spaced away from the right edge */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10; /* Ensure it stays above other elements */
 }
 
 /* Dropdown Menu */
 #dropDown-Menu {
-    position: fixed;
+    position: fixed; /* Fixed position aligned with the button */
+    top: 60px; /* Positioned below the dropdown button */
+    right: 20px; /* Matches the button's horizontal alignment */
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+    padding: 0.5rem;
+    z-index: 10; /* Ensures it's above other content */
+}
 
-    bottom: 20px; /* Position it at the bottom of the page */
-    right: 20px;  /* Open towards the right side */
+#dropDown-Menu button {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.7rem 1rem;
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#dropDown-Menu button:hover {
+    background-color: #0056b3;
+}
+
+
+  
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+    align-items: center;
+}
+  
+form label, form input {
+    margin: 0.2rem 0;
+}
+  
+form input {
+    padding: 0.5rem; /* Slightly larger input padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 200px;
+}
+  
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.8rem 1rem; /* Increased size */
+    font-size: 1.2rem; /* Bigger text */
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+  
+form button:hover {
+    background-color: #0056b3;
+}
+  
+/* Teams Section */
+.TeamOne, .TeamTwo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: white;
     border: 1px solid #ccc;
-    padding: 15px;
-    border-radius: 8px;
-    display: none; /* Initially hidden */
-}
-
-/* Show dropdown menu when it's not hidden */
-#dropDown-Menu.open {
-    display: block; /* Make it visible when the class "open" is added */
-}
-
-/* Add this to handle the opening/closing action */
-#dropDown-Button.active + #dropDown-Menu {
-    display: block; /* Show the dropdown menu */
-}
-
-/* Scoreboard Table */
-#ScoreBoard {
-    margin-top: 20px;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.25rem;
     width: 100%;
-    border-collapse: collapse;
-    background-color: #fff;
+    max-width: 300px;
 }
-
-#ScoreBoard th,
-#ScoreBoard td {
-    padding: 12px;
+  
+.TeamOne h3, .TeamTwo h3 {
+    color: #007bff;
+}
+  
+.TeamOne section, .TeamTwo section {
+    margin: 0.5rem 0;
+}
+  
+button {
+    margin: 0.25rem;
+    padding: 0.8rem 1rem; /* Increased size */
+    font-size: 1.2rem; /* Bigger text */
+    font-weight: bold; /* Bold for visibility */
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+  
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+  
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+  
+/* Timer Section */
+.roundTimer {
     text-align: center;
-    border: 1px solid #ddd;
+    margin: 0.5rem 0;
 }
-
-#ScoreBoard th {
-    background-color: #f2f2f2;
-    font-weight: bold;
+  
+#gameTime {
+    font-size: 1.5rem; /* Slightly larger font */
+    margin: 0.25rem 0;
 }
-/* Scoreboard Table */
-#ScoreBoard {
-    margin-top: 20px;
+  
+.roundTimer button {
+    margin: 0.5rem;
+    padding: 0.8rem 1rem; /* Increased size */
+    font-size: 1.2rem; /* Bigger text */
+    font-weight: bold; /* Bold for clarity */
+}
+  
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
     width: 100%;
-    border-collapse: collapse;
-    background-color: #fff; /* White background for the table */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden; /* Ensure rounded corners apply to the entire table */
+    font-size: 1rem; /* Slightly larger font */
 }
 
-#ScoreBoard th,
-#ScoreBoard td {
-    padding: 15px; /* Comfortable padding */
-    text-align: center; /* Center-align content */
-    font-size: 1em; /* Ensure readability */
-    border-bottom: 1px solid #ddd; /* Subtle row separation */
-}
-
-#ScoreBoard th {
-    background-color: #4CAF50; /* Primary green color */
-    color: white; /* White text for contrast */
-    font-weight: bold; /* Emphasize header text */
-    text-transform: uppercase; /* Uppercase for better header clarity */
-}
-
-#ScoreBoard td {
-    color: #333; /* Neutral dark text color for readability */
-}
-
-#ScoreBoard tr:nth-child(even) {
-    background-color: #f9f9f9; /* Light gray background for alternate rows */
-}
-
-#ScoreBoard tr:hover {
-    background-color: #f1f1f1;
-}
+  

@@ -5,6 +5,21 @@
     "pg": "^8.13.1"
   },
   "scripts": {
-    "devStart": "nodemon UserDB.js"
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
+
+,
+  "/delivery/all/*": {
+  "target": "https://localhost:8081",
+  "secure": false,
+  "logLevel": "debug",
+  "changeOrigin": true
+  },
+  "jest": {
+        "setupFiles": ["./setup-jest.js"]
+        
+ }
 }

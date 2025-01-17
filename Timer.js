@@ -4,6 +4,8 @@ let starTime = 0;
 let elapsedTime = 0;
 let isRunning = false;
 let resetBtn = document.getElementById('endRound');
+let $gameStart = $('#gameStart');
+let $gameEnd = $('#gameEND');
 let roundNum = 1;
 let roundNumDoc = document.getElementById('roundNum')
 
@@ -16,6 +18,8 @@ function start(){
         isRunning = true;
         resetBtn.disabled = true;
         console.debug("starting");
+        $gameStart.prop('disabled', true);
+        $gameEnd.prop('disabled', true);
     }
 }
 function updateTime(){
@@ -41,6 +45,8 @@ function gamePause(){
         elapsedTime = Date.now() - starTime;
         isRunning = false;
         resetBtn.disabled = false;
+        $gameStart.prop('disabled', false);
+        $gameEnd.prop('disabled', false);
     }
 }
 function resetClock(){
@@ -54,7 +60,6 @@ function resetClock(){
     roundNumDoc.innerText = roundNum;
     roundEnd();
 }
-
 
 function roundEnd(){
     if (P1roundPts > P2roundPts){
@@ -71,37 +76,9 @@ function roundEnd(){
     } else {
         resetPts();
     }
+}
 
-}
-function resetPts(){
-    console.log(P1roundPts, P2roundPts, numbags_Player1, numbags_Player2);
-    P1roundPts = 0
-    P2roundPts = 0
-    player1Pts.textContent = P1roundPts;
-    player2Pts.textContent = P2roundPts;
-    numbags_Player1 = 4;
-    numbags_Player2 = 4;
-    console.log(numbags_Player1, numbags_Player2)
-    inPlus1.disabled = false;
-    inPlus2.disabled = false;
-    onPlus1.disabled = false;
-    onPlus2.disabled = false;
-    inMinus1.disabled = true;
-    inMinus2.disabled = true;
-    onMinus1.disabled = true;
-    onMinus2.disabled = true;
-}
-function endGAME(){
-    statistics();
-    resetClock();
-    P1BigScore = 0;
-    P2BigScore = 0;
-    roundNum = 1;
-    roundNumDoc.textContent = roundNum
-    P1BigScoreElement.textContent = P1BigScore;
-    P2BigScoreElement.textContent = P2BigScore;
 
-}
 
 
 

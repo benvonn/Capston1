@@ -1,5 +1,8 @@
 # Backyard Tally
 
+# Deploymemt Link
+   https://capston1-1.onrender.com
+   
 Backyard Tally is the ultimate online leaderboard and scorekeeper for cornhole enthusiasts, designed to bring a competitive edge to every backyard game. With real-time scoring, detailed player stats, and custom leaderboards, it’s never been easier to track your victories and climb the ranks. Share your wins, revisit match history, and even compete globally—all from a sleek, mobile-friendly platform. Whether you're playing casually with friends or vying for top bragging rights, Backyard Tally ensures every toss counts. Let the games begin! 🎯
 
 ## Stack Focus
@@ -40,19 +43,24 @@ To achieve seamless integration and ensure the flexibility of data handling, I w
 
 ## ERD Diagram
 
-![ERD Diagram](C:\Users\beanv\OneDrive\Desktop\CapStone1\ERD.jpg)
+![ERD Diagram](ERD.jpg)
 
 ## Dependencies
 
-1. `numpy` ver. 1.21.2  
-2. `pandas` ver 1.3.3  
-3. `scikit-learn` ver 0.24.2  
-4. `Flask` ver 2.0.1  
-5. `SQLAlchemy` ver 1.4.23  
-6. `psycopg2-binary` ver 2.9.3  
-7. `pytest` ver 6.2.4  
-8. `requests` ver 2.26.0  
-9. `Jinja`
+flask
+flask_sqlalchemy
+flask_cors
+
+# Database
+sqlalchemy
+psycopg2
+
+# Testing
+pytest
+
+# Other utilities
+requests
+jinja2
 
 ## Game Instructions
 
@@ -71,6 +79,14 @@ It’s very straightforward and pretty much runs itself:
    - **DPR:** Differential points per round (basically your score).
    - **PPR:** Points per round (efficiency).
 6. Once done, click ‘Game End’ for the stats and data to be tallied up and saved.
+
+
+## Steps to run
+   # Backend
+   1. setup venv313  'source ven313/bin/activate' 
+   2. 'pip install requirements.txt' into Ubuntu to download technologies
+   3. 'python DB.py' in terminal to start serve
+   # Frontend
 
 ## Key Features
 
